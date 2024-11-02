@@ -7,7 +7,7 @@ from parse import parse_with_ollama
 
 
 st.title("Scraper")
-url = st.text_input("Enter a URL: ")
+url = st.text_input("Enter a valid URL: ")
 
 if st.button("Scrape site"):
     st.write("Scraping the website")
@@ -21,7 +21,7 @@ if st.button("Scrape site"):
 
 if "dom_content" in st.session_state:
     parse_description = st.text_area("Describe what you want to parse?")
-
+#Extract the DOM content
     if st.button("Parse Content"):
         if parse_description:
             st.write("Parsing the content")
